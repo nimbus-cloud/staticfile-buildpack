@@ -45,7 +45,7 @@ else
   host_dotfiles=false
 fi
 
-status "Copying project files into public/"
+status "Copying project files into public/ (but not nb-config 😉)"
 shopt -s extglob
 root_dir_absolute=`cd $root_dir 2>/dev/null && pwd -P`
 if [ ${build_dir}/public != ${root_dir_absolute} ]; then
