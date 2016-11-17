@@ -53,9 +53,9 @@ if [ ${build_dir}/public != ${root_dir_absolute} ]; then
 
   if [[ "$host_dotfiles" = true ]]; then
     shopt -s dotglob
-    mv $root_dir_absolute/!(Staticfile|Staticfile.auth|manifest.yml|stackato.yml|.profile|.|..) $tmp_dir || true
+    mv $root_dir_absolute/!(Staticfile|Staticfile.auth|manifest.yml|stackato.yml|.profile|nb-config|.|..) $tmp_dir || true
   else
-    mv $root_dir_absolute/!(Staticfile|Staticfile.auth|manifest.yml|stackato.yml) $tmp_dir || true
+    mv $root_dir_absolute/!(Staticfile|Staticfile.auth|manifest.yml|stackato.yml|nb-config) $tmp_dir || true
   fi
 
   rm -rf $build_dir/public
